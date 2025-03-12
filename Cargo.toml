@@ -1,0 +1,30 @@
+[package]
+name = "deepseek-rs"
+version = "0.1.0"
+edition = "2024"
+authors = ["AnlangA <2682525840@qq.com>"]
+description = "DeepSeek API client library"
+license = "MIT"
+repository = "https://github.com/AnlangA/deepseek-rs"
+
+[dependencies]
+serde = {version = "1.0", features = ["derive"]}
+reqwest = {version = "0.12", features = ["json", "stream"]}
+serde_json = "1.0"
+tokio = {version = "1.43", features = ["full"]}
+futures = "0.3.31"
+bytes = "1.9.0"
+pin-project = "1.1.8"
+async-stream = "0.3.6"
+
+[[example]]
+name = "hello"
+path = "examples/hello.rs"
+
+[[example]]
+name = "balance"
+path = "examples/balance.rs"
+
+[[example]]
+name = "model_list"
+path = "examples/model_list.rs"
